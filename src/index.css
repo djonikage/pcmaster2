@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Computer Help Service Design System
+   Professional, modern, trustworthy IT service branding
+   All colors MUST be HSL for semantic design tokens
+*/
+
+@layer base {
+  :root {
+    /* Brand Colors - Professional IT Service Palette */
+    --background: 0 0% 100%;
+    --foreground: 220 15% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 25%;
+
+    /* Primary - Trust Blue for IT services */
+    --primary: 212 95% 52%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 212 95% 45%;
+    --primary-light: 212 100% 97%;
+
+    /* Secondary - Success Green for guarantees */
+    --secondary: 142 76% 36%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 142 76% 30%;
+    --secondary-light: 142 76% 96%;
+
+    /* Accent - Warm Orange for urgency/call to action */
+    --accent: 24 95% 53%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 24 95% 47%;
+    --accent-light: 24 100% 97%;
+
+    /* Neutral palette */
+    --muted: 220 13% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 212 95% 52%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --radius: 0.75rem;
+
+    /* Custom design tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(212 95% 52%), hsl(212 95% 65%));
+    --gradient-accent: linear-gradient(135deg, hsl(24 95% 53%), hsl(24 95% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 48%));
+    
+    --shadow-soft: 0 4px 6px -1px hsl(220 15% 25% / 0.1), 0 2px 4px -1px hsl(220 15% 25% / 0.06);
+    --shadow-medium: 0 10px 15px -3px hsl(220 15% 25% / 0.1), 0 4px 6px -2px hsl(220 15% 25% / 0.05);
+    --shadow-large: 0 20px 25px -5px hsl(220 15% 25% / 0.1), 0 10px 10px -5px hsl(220 15% 25% / 0.04);
+    --shadow-glow: 0 0 30px hsl(212 95% 52% / 0.3);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Sidebar theme compatibility */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 15% 25%;
+    --sidebar-primary: 212 95% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 13% 96%;
+    --sidebar-accent-foreground: 220 15% 25%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 212 95% 52%;
+  }
+
+  .dark {
+    --background: 220 27% 8%;
+    --foreground: 220 9% 95%;
+
+    --card: 220 27% 12%;
+    --card-foreground: 220 9% 95%;
+
+    --popover: 220 27% 12%;
+    --popover-foreground: 220 9% 95%;
+
+    --primary: 212 95% 58%;
+    --primary-foreground: 220 27% 8%;
+    --primary-hover: 212 95% 52%;
+    --primary-light: 212 95% 15%;
+
+    --secondary: 142 76% 42%;
+    --secondary-foreground: 220 27% 8%;
+    --secondary-hover: 142 76% 36%;
+    --secondary-light: 142 76% 12%;
+
+    --accent: 24 95% 58%;
+    --accent-foreground: 220 27% 8%;
+    --accent-hover: 24 95% 52%;
+    --accent-light: 24 95% 12%;
+
+    --muted: 220 27% 15%;
+    --muted-foreground: 220 9% 65%;
+
+    --border: 220 27% 18%;
+    --input: 220 27% 18%;
+    --ring: 212 95% 58%;
+
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 220 27% 8%;
+
+    /* Dark mode gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(212 95% 58%), hsl(212 95% 70%));
+    --gradient-accent: linear-gradient(135deg, hsl(24 95% 58%), hsl(24 95% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(142 76% 42%), hsl(142 76% 55%));
+    
+    --shadow-soft: 0 4px 6px -1px hsl(220 27% 8% / 0.4), 0 2px 4px -1px hsl(220 27% 8% / 0.2);
+    --shadow-medium: 0 10px 15px -3px hsl(220 27% 8% / 0.4), 0 4px 6px -2px hsl(220 27% 8% / 0.2);
+    --shadow-large: 0 20px 25px -5px hsl(220 27% 8% / 0.4), 0 10px 10px -5px hsl(220 27% 8% / 0.2);
+    --shadow-glow: 0 0 30px hsl(212 95% 58% / 0.4);
+
+    --sidebar-background: 220 27% 8%;
+    --sidebar-foreground: 220 9% 95%;
+    --sidebar-primary: 212 95% 58%;
+    --sidebar-primary-foreground: 220 27% 8%;
+    --sidebar-accent: 220 27% 15%;
+    --sidebar-accent-foreground: 220 9% 95%;
+    --sidebar-border: 220 27% 18%;
+    --sidebar-ring: 212 95% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
