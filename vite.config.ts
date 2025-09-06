@@ -5,13 +5,11 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  // Для GitHub Pages используйте base: '/your-repo-name/'
-  // Для кастомного домена используйте base: '/'
-  const isGitHubPages = process.env.GITHUB_PAGES === 'true';
-  const repoName = process.env.REPO_NAME || '';
+  // Для GitHub Pages всегда используем базовый путь с именем репозитория
+  const base = '/pcmaster2/';
   
   return {
-    base: isGitHubPages && repoName ? `/${repoName}/` : '/',
+    base: base,
     server: {
       host: "::",
       port: 8080,
